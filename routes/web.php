@@ -16,12 +16,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/admin', 'Admin\AdminController@index')->name('admin');
+Route::resource('contact', 'ContactController');
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('about', 'WelcomeController@about')->name('about');
 Route::get('contact', 'WelcomeController@contact')->name('contact');
 Route::get('visa', 'WelcomeController@visa')->name('visa');
-Route::put('contact', 'ContactController@store')->name('contactsend');
 
 Route::put('demande-visa', 'Visa\VisaController@store')->name('visa-demande');
+Route::get('visa-show/{visa}', 'Visa\VisaController@show')->name('visa.show');

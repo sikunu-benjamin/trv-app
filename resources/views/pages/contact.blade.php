@@ -3,14 +3,14 @@
     <nav class="breadcrumb-nav d-flex align-items-center" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="under" href="{{ route('home') }}">Accueil</a></li>
+                <li class="breadcrumb-item"><a class="under" href="{{ route('welcome') }}">Accueil</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><span>Contacts</span></li>
             </ol>
         </div>
     </nav>
     <div class="page-content">
         <div class="container">
-
+            @include('partials.success')
             <div class="row">
                 <aside class="sidebar col-lg-3 order-1 order-lg-0">
                     <div class="sidebar__content js-sticky-top">
@@ -32,11 +32,11 @@
                                 <h4 class="card-title">Send us a message</h4>
                                 <hr class="my-3"/>
                             </div>
-                            <form class="sidebar__subscribe" action="{{ route('contactsend') }}" method="POST" data-toggle="validator">
+                            <form class="sidebar__subscribe" action="{{ route('contact.store') }}" method="POST" data-toggle="validator">
                                 @csrf
-                                @method('PUT')
+                                @method('POST')
                                 <div class="form-group">
-                                    <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" placeholder="Name" required>
+                                    <input class="form-control @error('name') is-invalid @enderror" value="@auth {{ Auth::user()->name }} @endauth" type="text" name="name" placeholder="Name" required>
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -44,7 +44,7 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" placeholder="E-mail" required>
+                                    <input class="form-control @error('email') is-invalid @enderror" value="@auth {{ Auth::user()->email }} @endauth" type="email" name="email" placeholder="E-mail" required>
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

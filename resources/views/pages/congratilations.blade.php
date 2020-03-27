@@ -9,38 +9,32 @@
                         <div class="booking-card card">
                             <div class="card-body">
                                 <div class="booking-card__title">
-                                    <h2>03 Confirmation</h2>
+                                    <h2>02 Confirmation</h2>
                                     <hr class="mb-4">
                                 </div>
                                 @include('partials.success')
                                 <section class="mb-5">
-                                    <h4>Traveller info</h4>
+                                    <h4>Your info</h4>
                                     <div class="row">
                                         <div class="col-12 col-md-8">
-                                            <ul class="booking-card__checklist">
+                                            <ul class="booking-card__checklist text-uppercase">
                                                 <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">Booking number:</div><span>15694562</span>
+                                                    <div class="fw-sm">Fist name:</div><span>{{ $visas->first_name }}</span>
                                                 </li>
                                                 <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">Fist name:</div><span>Evgeny</span>
+                                                    <div class="fw-sm">Last name:</div><span>{{ $visas->last_name }}</span>
                                                 </li>
                                                 <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">Last name:</div><span>Your Travel World</span>
+                                                    <div class="fw-sm">E-mail address:</div><span>{{ $visas->email }}</span>
                                                 </li>
                                                 <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">E-mail address:</div><span>@your_travel_world</span>
+                                                    <div class="fw-sm">Street Address and number:</div><span>{{ $visas->street }}</span>
                                                 </li>
                                                 <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">Street Address and number:</div><span>Street Smiles house 123</span>
+                                                    <div class="fw-sm">Phone:</div><span>{{ $visas->phone_number }}</span>
                                                 </li>
                                                 <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">Town / City:</div><span>Krasnoyarsk</span>
-                                                </li>
-                                                <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">ZIP code:</div><span>982374</span>
-                                                </li>
-                                                <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
-                                                    <div class="fw-sm">Country:</div><span>Russia</span>
+                                                    <div class="fw-sm">Your country</div><span>{{ $visas->country }}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -48,24 +42,24 @@
                                 </section>
                                 <section class="mb-5">
                                     <h4>Special requirements</h4>
-                                    <p>I would like a room overlooking the main square, if possible. To you I will be very grateful. Thank you.</p>
+                                    <p>{{ $visas->message }}</p>
                                 </section>
                                 <section class="mb-5">
-                                    <h4>Payment</h4>
-                                    <p>You have now confirmed and guaranteed your booking by credit card.All payments are to be made at the hotel during your stay, unless otherwise stated in the hotel policies or in the room conditions.Please note that your credit card may be pre-authorised prior to your arrival.</p>
+                                    <h4>what you want</h4>
+                                    <div class="col-12 col-md-8">
+                                        <ul class="booking-card__checklist text-uppercase">
+                                            <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
+                                                <div class="fw-sm">Your destination</div><span>{{ $visas->destination }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between flex-wrap flex-column flex-sm-row mb-3">
+                                                <div class="fw-sm">Type of Visa</div><span>{{ $visas->typevisa }}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </section>
-                                <div class="mb-5">
-                                    <div class="fw-bold">This hotel accepts the following forms of payment:</div>
-                                    <ul>
-                                        <li>American Express, Visa, MasterCard</li>
-                                    </ul>
-                                </div>
-                                <section>
-                                    <h4>Cancel Reservation</h4>
-                                    <p>
-                                        You can cancel the reservation. To cancel the reservation, please
-                                        <a href="#">click here.</a>
-                                    </p>
+                                <section class="mb-5">
+                                    <h4>Reform Travel</h4>
+                                    <p>Your registration has been successfully submitted. Thank you we will get back to you shortly!</p>
                                 </section>
                             </div>
                         </div>

@@ -120,7 +120,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" id="agreePolicy" name="remember" {{ old('remember') ? 'checked' : '' }} type="checkbox"><span class="custom-control-label">Remember me?</span>
+                                    <input class="custom-control-input" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }} type="checkbox"><span class="custom-control-label">Remember me?</span>
                                 </label>
                             </div>
                             <div class="d-flex flex-wrap justify-content-between align-items-center">
@@ -326,10 +326,10 @@
                             <li class="nav-item d-flex">
                                 <a class="nav-link btn btn-light js-toggle-account" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();" role="button"><i class="text-gray icon icon-logout mr-2"></i>
+                                                     document.getElementById('logout-form2').submit();" role="button"><i class="text-gray icon icon-logout mr-2"></i>
                                     <span>sign out</span>
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form2" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
                             </li>

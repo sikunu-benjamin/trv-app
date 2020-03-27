@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Visa;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Visa\CreateVisaRequest;
+use App\Visa;
 use Illuminate\Http\Request;
 
 class VisaController extends Controller
@@ -25,6 +26,11 @@ class VisaController extends Controller
             'maritalstatus' => $request->maritalstatus,
         ]);
         session()->flash('success', 'Thank you your request has been send');
-        return view('visa.confirm')->with('visas', $visas);
+        return view('pages.congratilations')->with('visas', $visas);
+    }
+
+    public function show(Visa $visa)
+    {
+        return view('admin.visa_show')->with('visa', $visa);
     }
 }
