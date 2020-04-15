@@ -279,10 +279,18 @@
                                 <li class="nav-item d-flex dropdown">
                                     <a class="nav-link btn btn-light text-primary" href="#" data-toggle="dropdown" role="button">
                                         <div class="d-flex align-items-center">
-                                            <img class="user-avatar mr-1 rounded-circle" src="{{ asset('img/avatar-face.jpg') }}" alt="#" width="35" height="35"/><span>@ {{ mb_substr(Auth::user()->name, 0, 1, "UTF-8") }}</span>
+                                            <img class="user-avatar mr-1 rounded-circle" src="{{ asset('img/avatar-face.jpg') }}" alt="#" width="35" height="35"/>
+                                            <span>@ {{ mb_substr(Auth::user()->name, 0, 1, "UTF-8") }}</span>
                                         </div>
                                     </a>
-                                    <div class="dropdown-menu py-0 rounded-0"><a class="d-flex align-items-center justify-content-center p-3" href="{{ route('home') }}"><span class="text-nowrap">{{ Auth::user()->name }}</span></a></div>
+                                    <div class="dropdown-menu py-0 rounded-0">
+                                        <a class="d-flex align-items-center justify-content-center p-3" href="{{ route('home') }}">
+                                            <span class="text-nowrap">{{ Auth::user()->name }}</span>
+                                        </a>
+                                        <a class="d-flex align-items-center justify-content-center p-3" href="{{ route('admin') }}">
+                                            <span class="text-nowrap">Page Admin</span>
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -333,10 +341,20 @@
                                     @csrf
                                 </form>
                             </li>
-                            <li class="nav-item d-flex">
-                                <div class="nav-link d-flex align-items-center btn btn-light">
-                                    <i class="icon pr-2"><img class="user-avatar rounded-circle img-fluid" src="{{ asset('img/avatar-face.jpg') }}" alt="avatar"/></i>
-                                    <span>@ {{ Auth::user()->name }}</span>
+                            <li class="nav-item d-flex dropdown">
+                                <a class="nav-link btn btn-light text-primary" href="#" data-toggle="dropdown" role="button">
+                                    <div class="d-flex align-items-center">
+                                        <img class="user-avatar mr-1 rounded-circle" src="{{ asset('img/avatar-face.jpg') }}" alt="#" width="35" height="35"/>
+                                        <span>@ {{ Auth::user()->name }}</span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu py-0 rounded-0">
+                                    <a class="d-flex align-items-center justify-content-center p-3" href="{{ route('home') }}">
+                                        <span class="text-nowrap">{{ Auth::user()->name }}</span>
+                                    </a>
+                                    <a class="d-flex align-items-center justify-content-center p-3" href="{{ route('admin') }}">
+                                        <span class="text-nowrap">Page Admin</span>
+                                    </a>
                                 </div>
                             </li>
                         </ul>
@@ -350,7 +368,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="#"><span>Préinscription</span></a>
                         </li>
-                        <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="#"><span>Hôtel et Hébergement</span></a>
+                        <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{{ route('heberger.index') }}"><span>Hôtel et Hébergement</span></a>
                         </li>
                         <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="#"><span>Assurance voyage</span></a>
                         </li>

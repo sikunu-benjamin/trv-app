@@ -97,7 +97,11 @@
                             <tfoot>
                                 <tr>
                                     <td>
-                                        <a class="btn btn--round btn-danger" href="">supprimer</a>
+                                        <form action="{{ route('contact.destroy', $contact->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">supprimer</button>
+                                        </form>
                                     </td>
                                 </tr>
                             </tfoot>

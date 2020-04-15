@@ -33,4 +33,12 @@ class VisaController extends Controller
     {
         return view('admin.visa_show')->with('visa', $visa);
     }
+
+    public function destroy(Visa $visa)
+    {
+        $visa->delete();
+
+        session()->flash('success', 'visa request deleted successfully.');
+        return redirect(route('admin'));
+    }
 }

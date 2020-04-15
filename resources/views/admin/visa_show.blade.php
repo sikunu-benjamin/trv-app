@@ -136,7 +136,11 @@
                                 <td>
                                     <a class="btn btn--round btn-primary" href="">contact</a>
                                     <a class="btn btn--round btn-outline-warning" href="">completed</a>
-                                    <a class="btn btn--round btn-danger" href="">delete</a>
+                                    <form action="{{ route('visa.delete', $visa->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn--round btn-danger float-right">delete</button>
+                                    </form>
                                 </td>
                             </tr>
                             </tfoot>
