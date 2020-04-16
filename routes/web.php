@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', 'Admin\AdminController@index')->name('admin');
+Route::get('/admin', 'Admin\AdminController@index')->name('admin')->middleware(\App\Http\Middleware\isAdmin::class);
 Route::resource('contact', 'ContactController');
 //Route::resource('api', 'ApitripadvisorController');
 Route::get('api/view/{location_id}', 'ApitripadvisorController@find')->name('hotel.view');

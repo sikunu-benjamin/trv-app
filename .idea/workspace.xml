@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e13fea8-7ff7-4a0d-be94-7ce68d4ef412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ApitripadvisorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HebergementController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/500.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/hotel/view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/travels/hebergementIndex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Bradtravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bradtravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/isAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/CountryTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Visa/VisaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Visa/VisaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/contact_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/contact_show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/visa_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/visa_show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/503.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/travel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/travel.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/reform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reform.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -205,7 +195,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:bradtravel@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -228,12 +223,23 @@
       <workItem from="1586094235865" duration="10057000" />
       <workItem from="1586378008462" duration="59000" />
       <workItem from="1586947674757" duration="623000" />
-      <workItem from="1586953742411" duration="5555000" />
+      <workItem from="1586953742411" duration="24285000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -251,6 +257,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="370" y="134" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.760@0.0.1280.760" timestamp="1586959524409" />
+    <state x="263" y="0" key="CommitChangelistDialog2" timestamp="1587065175911">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="263" y="0" key="CommitChangelistDialog2/0.0.1280.760@0.0.1280.760" timestamp="1587065175911" />
     <state x="420" y="134" key="FileChooserDialogImpl" timestamp="1584980670547">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
@@ -263,13 +273,17 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="220" y="34" key="com.intellij.database.dbimport.ImportDialog/0.0.1280.760@0.0.1280.760" timestamp="1584980674856" />
+    <state x="349" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1587046407198">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="349" y="17" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.760@0.0.1280.760" timestamp="1587046407198" />
     <state x="316" y="203" key="com.intellij.ide.util.TipDialog" timestamp="1586953892609">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="316" y="203" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1586953892609" />
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1586959489233">
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1587045529709">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1586959489233" />
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1587045529709" />
   </component>
 </project>

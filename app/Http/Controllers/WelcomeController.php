@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Country;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class WelcomeController extends Controller
 {
@@ -28,7 +29,21 @@ class WelcomeController extends Controller
                 "X-RapidAPI-Key" => "29841e67dbmsh1771f08a18d6915p1d81bfjsn15504580f3f1"
             )
         );*/
-        //dump($response->body->data);
+                $token = "2f438e524d340ea9fe45bbc5e95df7f7";
+
+
+        //$response = "http://yasen.hotellook.com/tp/public/widget_location_dump.json?currency=rub&language=ru&limit=5&id=12209&type=popularity&check_in=2020-05-02&check_out=2020-05-17&token=2f438e524d340ea9fe45bbc5e95df7f7";
+
+        $response = \Unirest\Request::get(
+            "http://api.travelpayouts.com/v2/prices/month-matrix?currency=usd&origin=LED&destination=HKT&show_to_affiliates=true&token=2f438e524d340ea9fe45bbc5e95df7f7",[]
+        );
+
+
+        /*$response = Http::get(
+            'http://yasen.hotellook.com/tp/public/widget_location_dump.json?currency=rub&language=ru&limit=5&id=12209&type=popularity&check_in=2020-05-05&check_out=2020-06-17',
+            array('token' => '2f438e524d340ea9fe45bbc5e95df7f7')
+        )->json();*/
+        // dd($response);
         return view('reform'); //->with('responses', $response->body->data);
     }
 

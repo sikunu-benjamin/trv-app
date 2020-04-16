@@ -364,7 +364,7 @@
                 <div class="container-fluid p-0">
                     <div class="swiper-container js-intro-hotels">
                         <div class="swiper-wrapper">
-                           {{-- @foreach($responses as $response)
+                            {{-- @foreach($responses as $response)
                                 <div class="swiper-slide">
                                     <div class="card-intro d-block" style="background-image: url( {{ $response->photo->images->medium->url }} );">
                                         <div class="card-price"><span class="mr-1">from</span><span class="count text-secondary">{{ $response->price }}</span></div>
@@ -403,7 +403,7 @@
                         <h2 class="h2">Popular destinations around the world</h2>
                         <div class="section-header__stars mb-3"><i class="fa fa-star"></i><i class="fa fa-star center"></i><i class="fa fa-star"></i></div>
                         <p class="fz-norm mb-0"><em>The best choice of hotels we have</em></p>
-                    </div>
+                        </div>
                 </div>
             </div>
             <div class="row">

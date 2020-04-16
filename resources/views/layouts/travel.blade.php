@@ -287,9 +287,11 @@
                                         <a class="d-flex align-items-center justify-content-center p-3" href="{{ route('home') }}">
                                             <span class="text-nowrap">{{ Auth::user()->name }}</span>
                                         </a>
+                                        @if(auth()->user()->isAdmin())
                                         <a class="d-flex align-items-center justify-content-center p-3" href="{{ route('admin') }}">
                                             <span class="text-nowrap">Page Admin</span>
                                         </a>
+                                        @endif
                                     </div>
                                 </li>
                             </ul>
@@ -364,7 +366,7 @@
                     <ul class="main-nav__list nav d-flex" id="navMenu">
                         <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{{ route('welcome') }}"><span>Accueil</span></a>
                         </li>
-                        <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{{ route('visa') }}"><span>Demande de visa</span></a>
+                        <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="{{ route('visa') }}"><span>Demarche de visa</span></a>
                         </li>
                         <li class="nav-item"><a class="nav-link fw-bold text-uppercase" href="#"><span>Préinscription</span></a>
                         </li>
